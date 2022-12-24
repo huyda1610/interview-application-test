@@ -1,0 +1,83 @@
+.box {
+  position: relative;
+  width: 100%;
+}
+
+.box .row {
+  display: flex;
+  gap: 20px
+}
+
+.box .row .infoBox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  width: 50%;
+}
+
+.box .row .infoBox p {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #18b7ff;
+}
+
+.box .row .infoBox span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.box .row .infoBox img {
+  border: 1px solid rgb(4, 4, 4);
+  border-radius: 4px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.lds-dual-container {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: rgb(0, 208, 255) transparent rgb(0, 208, 255) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 991px) {
+
+  .box .row {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .box .row .infoBox {
+    width: 100%;
+  }
+}
