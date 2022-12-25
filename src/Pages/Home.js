@@ -26,9 +26,9 @@ class Home extends Component {
     document.removeEventListener('mousedown', this.handleClickOutside);
   }
 
-  handleOpenModal (country) {
+  handleOpenModal (countryCode) {
     document.getElementById("myModal").style.display = "block";
-    this.props.getCountryDetail(country);
+    this.props.getCountryDetail(countryCode);
   }
 
   handleCloseModal () {
@@ -168,7 +168,7 @@ class Home extends Component {
                       <p>{item.TotalRecovered.toLocaleString()}</p>
                     </td>
                     <td className='details'>
-                      <button id="myBtn" onClick={() => this.handleOpenModal(item.Country)}>Country Details</button>
+                      <button id="myBtn" onClick={() => this.handleOpenModal(item.CountryCode)}>Country Details</button>
                     </td>
                   </tr>
                 );

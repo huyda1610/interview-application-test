@@ -24,10 +24,10 @@ export const getCovidData = createAsyncThunk(
 
 export const getCountryDetail = createAsyncThunk(
   "data/getCountryDetail",
-  async (country) => {
+  async (countryCode) => {
     try {
       const {data} = await axios.get(
-        `https://restcountries.com/v3.1/name/${country}`
+        `https://restcountries.com/v3.1/alpha/${countryCode}`
       );
       return { data: data };
     } catch (error) {
